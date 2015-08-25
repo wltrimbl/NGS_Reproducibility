@@ -1,0 +1,32 @@
+---
+title: "Practice document"
+author: "W. Trimble"
+date: "August 25, 2015"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r Set Seed, eval=FALSE, echo=TRUE}
+runif(1, 0, 10^8)
+set.seed(seed = 43855096)
+```
+
+URL<-("https://raw.githubusercontent.com/ryanjw/ngs-3rdweek/master/visualizations/datasets/fly_data.txt")
+dataset<-read.table(textConnection(getURL(URL)),header=T,check.names=F,sep="\t")
+
+```{r install packages, eval=FALSE, echo=TRUE}
+install.packages("devtools")
+library("devtools")
+install.packages("ggplot2")
+library("ggplot2")
+install.packages("RCurl")
+library("RCurl")
+install.packages("ggplot2")
+library("ggplot2")
+install.packages("vegan")
+library("vegan")
+```
+
